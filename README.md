@@ -20,7 +20,7 @@ In May 2026, an outbreak of Bundibugyo virus disease (a species of Ebola) was co
 
 ## Key findings (to 13 October 2026)
 
-![Weekly epicurve](figures/epicurve.png)
+![Weekly epicurve](epicurve.png)
 
 - **9,212 confirmed cases** and **4,441 confirmed deaths**.
 - **Case fatality ratio: 48.2%**. About one in two confirmed patients has died.
@@ -30,7 +30,7 @@ In May 2026, an outbreak of Bundibugyo virus disease (a species of Ebola) was co
 - **Mid-September onwards:** a gradual decline to about 380 to 490 new cases a week, but transmission is still ongoing.
 - The grey bar is the current week, which is still being reported and should not be read as a real drop.
 
-![Weekly deaths](figures/weekly_deaths.png)
+![Weekly deaths](weekly_deaths.png)
 
 ## Implications for point-of-entry surveillance
 Although weekly cases have declined since mid-September, the outbreak is still producing several hundred confirmed cases a week, with a case fatality ratio close to 50% and no licensed vaccine or specific treatment for Bundibugyo virus. With high population movement and trade between the DRC, Uganda and East Africa, the risk of exported cases remains real. For points of entry such as JKIA, this supports keeping traveller screening, timely reporting through IDSR and cross-border data sharing active. A regional platform that brings outbreak trends and point-of-entry data together in one place would help port health teams prioritise screening by route and risk.
@@ -42,9 +42,11 @@ Although weekly cases have declined since mid-September, the outbreak is still p
 - I compared two compilations of the same situation reports and found date errors in one (report dates shifted by several weeks for sitreps 86 to 133, checked against the original PDF file names). I used the INRB-UMIE dataset because its dates were consistent.
 
 ## How to run
-1. Open `ebola-surveillance-analysis.Rproj` in RStudio.
+1. Create an RStudio project and put the CSV files in a folder called `data`.
 2. Install packages once: `install.packages(c("tidyverse", "lubridate"))`
 3. Open `ebola_script.R` and click **Source**. Charts are saved to `figures/` and a weekly summary to `data/weekly_summary.csv`.
+
+(In this repository, all files are stored in the main folder for easy viewing.)
 
 ## Next steps
 - Estimate the time-varying reproduction number (Rt) using the `EpiEstim` package.
